@@ -1,0 +1,7 @@
+apiVersion: learn.learnoperator.com/v1
+kind: Learning
+metadata:
+  name: learning-sample
+spec:
+  # Add fields here
+  size: 1

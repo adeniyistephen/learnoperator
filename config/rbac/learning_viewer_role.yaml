@@ -1,0 +1,20 @@
+# permissions for end users to view learnings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: learning-viewer-role
+rules:
+- apiGroups:
+  - learn.learnoperator.com
+  resources:
+  - learnings
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - learn.learnoperator.com
+  resources:
+  - learnings/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit learnings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: learning-editor-role
+rules:
+- apiGroups:
+  - learn.learnoperator.com
+  resources:
+  - learnings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - learn.learnoperator.com
+  resources:
+  - learnings/status
+  verbs:
+  - get

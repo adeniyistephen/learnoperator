@@ -1,0 +1,16 @@
+domain: learnoperator.com
+layout:
+- go.kubebuilder.io/v3
+projectName: learnoperator
+repo: github.com/adeniyistephen/learnoperator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: learnoperator.com
+  group: learn
+  kind: Learning
+  path: github.com/adeniyistephen/learnoperator/api/v1
+  version: v1
+version: "3"
